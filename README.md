@@ -37,7 +37,7 @@ Este repositório contém **prints** e um passo-a-passo para criar uma VPC prepa
 2. Criar e configurar sub-redes pública e privada
 3. Criar um gateway de internet
 4. Criar e configurar tabelas de rotas
-5. Acessar o endpoint do site
+5. Criar um gatway NAT
 
 ---
 
@@ -138,3 +138,30 @@ Este repositório contém **prints** e um passo-a-passo para criar uma VPC prepa
 ![Selecionar a sub-rede](Imagens%20do%20console%20AWS/38-sub-rede-publica-selecionada-para-associacao.jpg)
 ![Tabela de rotas associada](Imagens%20do%20console%20AWS/39-sub-rede-publica-associacada.jpg)
 ![Tabelas de rotas](Imagens%20do%20console%20AWS/40-tabela-de-rotas-publica-e-privada-criadas.jpg)
+
+### 5) Criar o Gatway NAT
+- Inicie a criação do Gateway NAT
+
+![Acessar Gateway NAT](Imagens%20do%20console%20AWS/41%20-%20Acessar-Gateway-NAT.jpg)
+
+- Defina o nome, selecione `Zonal` no **Modo de disponibilidade**, aponte para a sub-rede públuca criada anteriormente e clique em **Alocar IP elástico**
+
+![Configuracao do Gateway NAT](Imagens%20do%20console%20AWS/42%20-%20Configuracao-Gateway-NAT.jpg)
+![Criar Gateway NAT](Imagens%20do%20console%20AWS/43%20-%20Criar-Gateway-NAT.jpg)
+![Gateway NAT criado](Imagens%20do%20console%20AWS/44%20-%20Gateway-NAT-criado.jpg)
+
+- Editar rotas da Tabela de Rotas Privada
+
+![Editar tabela de rotas](Imagens%20do%20console%20AWS/45%20-%20Editar-tabela-de-rotas-privadas.jpg)
+
+- Adicionar uma nova rota e direcione o destino (/0) para o Gateway NAT criado anteriormente
+
+![Criar Gateway NAT](Imagens%20do%20console%20AWS/46%20-%20Adicionar-rotas.jpg)
+![Criar Gateway NAT](Imagens%20do%20console%20AWS/47%20-%20Configuracao-da-rota.jpg)
+![Criar Gateway NAT](Imagens%20do%20console%20AWS/48%20-%20Rota-criada.jpg)
+
+---
+
+⚠️ Conclusão
+
+Com esta configuração no ambiente da VPC, qualquer recursos adicionado à sub-rede privada que desejar se comunicar com a internet agora têm seu tráfego de rede direcionado para o gateway NAT, que encaminha a solicitação para a internet. As respostas fluem pelo gateway NAT de volta para a sub-rede privada. Enquanto os recursos adicionados à sub-rede pública se comunicam com a internet através do gateway de internet.

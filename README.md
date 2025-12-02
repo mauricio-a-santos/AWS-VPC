@@ -73,7 +73,7 @@ Este repositório contém **prints** e um passo-a-passo para criar uma VPC prepa
 
 - Configurar ID da VPC, nome e bloco CIDR IPv4 da sub-rede (OBS.: uma Zona de disponibilidade deve ser selecionada)
 
-![configuracao da sub-rede](Imagens%20do%20console%20AWS/11-nome-da-sub-rede-publica.jpg)
+![configuracao da sub-rede](Imagens%20do%20console%20AWS/11-nome-da-sub-rede-public.jpg)
 ![criar sub-rede](Imagens%20do%20console%20AWS/12-CIDR-e-criacao-da-sub-rede-publica.jpg)
 ![sub-rede criada](Imagens%20do%20console%20AWS/13-sub-rede-publica-criada.jpg)
 
@@ -85,7 +85,7 @@ Este repositório contém **prints** e um passo-a-passo para criar uma VPC prepa
 - Repita o mesmo processo de criação para a sub-rede privada (O CIDR IPv4 deve ser diferente da sub-rede pública)
 
 ![Acessar sub-redes](Imagens%20do%20console%20AWS/16-iniciar-criacao-de-sub-rede-privada.jpg)
-![configuracao da sub-rede](Imagens%20do%20console%20AWS/17-nome-da-sub-rede-privada.jpg)
+![configuracao da sub-rede](Imagens%20do%20console%20AWS/17-nome-da-sub-rede-privad.jpg)
 ![criacao da sub-rede](Imagens%20do%20console%20AWS/18-CIDR-e-criacao-da-sub-rede-privada.jpg)
 ![Sub-rede criada](Imagens%20do%20console%20AWS/19-sub-rede-privada-criada.jpg)
 
